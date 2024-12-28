@@ -1,0 +1,198 @@
+/*General styles*/
+
+:root{
+    --bgColor: #eae0d5;
+    --shadowColor: #c6ac8f;
+    --highlightColor: #7f5539;
+    --darkerColor: #5e503f;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bgColor);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.sectionTitle{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--darkerColor);
+    text-align: center;
+    text-shadow: 5px 5px 5px var(--shadowColor);
+}
+
+/*Barra de navegación*/
+
+nav{
+    background: radial-gradient(var(--shadowColor) 75%,#b08968);
+    color: var(--darkerColor);
+    height: 12vh;
+    width: 100%;
+    font-size: 30px;
+    position: sticky;
+    margin-top: -30px;
+    top: 0;
+    border-bottom: 2px solid var(--darkerColor);
+    box-shadow: 0px 10px 10px rgb(0,0,0,0.25);
+    z-index: 1;
+}
+
+ul{
+    text-align: end;
+    padding-top: 20px;
+}
+
+li{
+    display: inline;
+    padding-right: 35px;
+    text-shadow: 1px 1px 1px #5e503f;
+}
+
+li:hover{
+    color: var(--bgColor);
+    cursor: pointer;
+}
+
+/*Presentación*/
+
+#presentation{
+    margin-top: 100px;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#presentation-info{
+    padding-top: 50px;
+}
+
+#presentation-info h1{
+    font-size: 75px;
+    font-weight: lighter;
+    color: var(--highlightColor);
+    text-shadow: 5px 5px 5px var(--shadowColor);
+}
+
+#presentation-info h2{
+    margin-top: -60px;
+    font-size: 40px;
+    font-weight: lighter;
+    color: var(--darkerColor);
+    text-align: center;
+    text-shadow: 5px 5px 5px var(--shadowColor);
+}
+
+#meImage{
+    height: 25vw;
+    border-radius: 50%;
+    box-shadow: 20px 15px 50px var(--shadowColor);
+}
+
+/*Sobre mi*/
+#aboutMe{
+    margin-top: 10%;
+}
+
+#aboutMe p{
+    width: 75%;
+    font-size: 25px;
+    margin-top: 0px;
+    text-align: center;
+    justify-self: center;
+    text-shadow: 2px 2px 2px #c6ac8f;
+    color: var(--darkerColor);
+}
+
+/*Proyectos*/
+
+#proyects{
+    margin-top: 50px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.proyectCard{
+    width: 75vw;
+    height: 350px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px;
+    border-radius: 35px;
+    border: 5px solid var(--highlightColor);
+    box-shadow: 5px 5px 5px var(--shadowColor);
+    margin-top: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyectCard:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 10px var(--shadowColor);
+}
+
+.infoProyect{
+    margin-right: -40px;
+    padding-left: 5px;
+}
+
+.proyectTitle{
+    font-size: 35px;
+    margin-top: 15px;
+    color: var(--highlightColor);
+    text-shadow: 3px 3px 3px var(--shadowColor);
+}
+
+/*Gestor de clientes*/
+
+#explanation{
+    font-size: 23px;
+    margin-top: -20px;
+}
+
+#managerJPG{
+    height:25vw;
+    border-radius: 35px;
+    margin-left: 75px;
+    box-shadow: 5px 5px 5px var(--shadowColor);
+}
+
+.technologies{
+    color: var(--darkerColor);
+}
+
+.technologies p{
+    display: inline;
+    border: 2px solid var(--darkerColor);
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+    background-color: var(--shadowColor);
+}
+
+/*Propio lenguaje*/
+
+#explanation2{
+    font-size: 22px;
+    margin-top: -15px;
+}
+
+
+#languageJPG{
+    height:25vw;
+    width: 648px;
+    border-radius: 35px;
+    margin-left: 75px;
+    box-shadow: 5px 5px 5px var(--shadowColor);
+}
+
+/*Footer*/
+
+footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #b08968;
+    height: 150px;
+}
