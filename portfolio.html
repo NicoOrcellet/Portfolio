@@ -8,6 +8,10 @@
     </head>
     <body>
         <nav>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"><img src="src/sun.png" class="modeImage"></span>
+            </label>
             <ul>
                 <li><a href="#aboutMe">Sobre mí</a></li>
                 <li><a href="#proyects">Proyectos</a></li>
@@ -15,11 +19,11 @@
             </ul>
         </nav>
         <div id='presentation'>
-            <div id='presentation-info'>
+            <div class='presentationInfo'>
                 <h1>Nicolás Orcellet</h1>
                 <h2>Desarrollador de Software</h2>
             </div>
-            <img src='me.png' id="meImage">  
+            <img src='src/me.png' alt="Foto propia">  
         </div>
         <div id='aboutMe'>
             <h2 class="sectionTitle">Sobre mí</h2>
@@ -39,7 +43,7 @@
                 <div class="infoProyect">
                     <div>
                         <h3 class="proyectTitle">Gestor de clientes</h3>
-                        <p id= "explanation">
+                        <p id= "managerExplanation">
                             Aplicación de escritorio para gestionar clientes, ventas y compras 
                             de un emprendimiento familiar. La herramienta permite almacenar y 
                             administrar información clave de manera eficiente, simplificando 
@@ -50,7 +54,7 @@
                         <p>PostgreSQL</p>
                     </div>
                 </div>
-                <img id="managerJPG" src='clientManager.jpg'>
+                <img class="proyectImage" src='src/clientManager.jpg' alt="Gestor de clientes">
             </div>
             <div class="proyectCard">
                 <div class="infoProyect">
@@ -64,9 +68,13 @@
                     </div>
                     <div class="technologies">
                         <p>Pascal</p>
+                        <a>
+                            <img src="src/github-mark.png" alt="GitHub">
+                        </a>
                     </div>
                 </div>
-                <img id="languageJPG" src='ownLanguage.png'>
+                <img id="languageImage" class="proyectImage" src='src/ownLanguage.png' 
+                alt="Lenguaje propio">
             </div>
         </div>
         <div id="contactMe">
@@ -75,17 +83,20 @@
                 saber más sobre mi trabajo? Ponte en contacto conmigo a través de:</p>
             <div>
                 <a href="https://github.com/NicoOrcellet" target="_blank">
-                    <img src="github-mark.png">
+                    <img src="src/github-mark.png" alt="GitHub">
                 </a>
                 <a href="mailto:orcelletnicolas03@gmail.com">
-                    <img src="mail.png">
+                    <img src="src/mail.png" alt="Mail">
                 </a>
-                <a href="https://www.linkedin.com/in/nicol%C3%A1s-orcellet-7793a433b/">
-                    <img src="linkedin.png">
+                <a href="https://www.linkedin.com/in/nicol%C3%A1s-orcellet-7793a433b/" target="_blank">
+                    <img src="src/linkedin.png" alt="LinkedIn">
                 </a>
             </div>
         </div>
         <footer>
+            <p>Desarrollado con HTML y CSS.<br>© 2024 Nicolás Orcellet. 
+                Todos los derechos reservados.<br>Los logos de GitHub y LinkedIn son 
+                marcas registradas de sus respectivos propietarios.</p>
         </footer>
     </body>
 </html>
