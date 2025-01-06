@@ -12,6 +12,7 @@
                 <input type="checkbox">
                 <span class="slider"><img src="src/sun.png" class="modeImage"></span>
             </label>
+            <button>≡</button>
             <ul>
                 <li><a href="#aboutMe">Sobre mí</a></li>
                 <li><a href="#proyects">Proyectos</a></li>
@@ -54,13 +55,13 @@
                         <p>PostgreSQL</p>
                     </div>
                 </div>
-                <img class="proyectImage" src='src/clientManager.jpg' alt="Gestor de clientes">
+                <a><img class="proyectImage" src='src/clientManager.jpg' alt="Gestor de clientes"></a>
             </div>
             <div class="proyectCard">
                 <div class="infoProyect">
                     <div>
                         <h3 class="proyectTitle">Lenguaje propio</h3>
-                        <p id= "explanation2">
+                        <p id= "languageExplanation">
                             Lenguaje de programación que soporta escritura, lectura y 
                             ejecución de operaciones. Permite trabajar con ciclos, 
                             condicionales y realizar cálculos como suma, resta, multiplicación, 
@@ -68,12 +69,12 @@
                     </div>
                     <div class="technologies">
                         <p>Pascal</p>
-                        <a>
-                            <img src="src/github-mark.png" alt="GitHub">
+                        <a href="https://github.com/NicoOrcellet/SaDaNiCode" target="_blank">
+                            <img id="githubProyect" src="src/github-mark.png" alt="GitHub">
                         </a>
                     </div>
                 </div>
-                <img id="languageImage" class="proyectImage" src='src/ownLanguage.png' 
+                <img class="proyectImage" src='src/ownLanguage.png' 
                 alt="Lenguaje propio">
             </div>
         </div>
@@ -83,20 +84,21 @@
                 saber más sobre mi trabajo? Ponte en contacto conmigo a través de:</p>
             <div>
                 <a href="https://github.com/NicoOrcellet" target="_blank">
-                    <img src="src/github-mark.png" alt="GitHub">
+                    <img id="github" src="src/github-mark.png" alt="GitHub">
                 </a>
                 <a href="mailto:orcelletnicolas03@gmail.com">
-                    <img src="src/mail.png" alt="Mail">
+                    <img id="mail" src="src/mail.png" alt="Mail">
                 </a>
                 <a href="https://www.linkedin.com/in/nicol%C3%A1s-orcellet-7793a433b/" target="_blank">
-                    <img src="src/linkedin.png" alt="LinkedIn">
+                    <img id="linkedin" src="src/linkedin.png" alt="LinkedIn">
                 </a>
             </div>
         </div>
         <footer>
-            <p>Desarrollado con HTML y CSS.<br>© 2024 Nicolás Orcellet. 
+            <p>Desarrollado con HTML, CSS y JS.<br>© 2024 Nicolás Orcellet. 
                 Todos los derechos reservados.<br>Los logos de GitHub y LinkedIn son 
                 marcas registradas de sus respectivos propietarios.</p>
         </footer>
     </body>
+    <script src="./script.js"></script>
 </html>

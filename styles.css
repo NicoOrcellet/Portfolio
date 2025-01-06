@@ -1,22 +1,27 @@
 /*General styles*/
+
 :root{
     --bgColor: #F9FAFB;
     --shadowColor: #D1D5DB;
-    --highlightColor: #3B82F6;
+    --highlightColor: #3b82f6;
     --highlightGradient: #1E3A8A;
-    --darkerColor: #1E293B;
+    --contrastColor: #1E293B;
+    --titleColor: #1E293B;
+    --borderColor: #1E293B;
 }
 
 .darkMode{
     --bgColor: #4a4e69;
     --shadowColor: #22223b;
-    --highlightColor: #4ad66d;
-    --highlightGradient: #2dc653;
-    --darkerColor: #b7efc5; 
+    --highlightColor: #95d5b2;
+    --highlightGradient: #476355;
+    --contrastColor: #dad7cd;
+    --titleColor: #52796f;
+    --borderColor: #2f3e46;
 }
 
-html{
-    scroll-padding-top: 15vh;
+#aboutMe, #proyects, #contactMe{
+    scroll-margin-top: 15vh;
 }
 
 body{
@@ -30,7 +35,7 @@ body{
 .sectionTitle{
     font-size: 40px;
     font-weight: bold;
-    color: var(--darkerColor);
+    color: var(--titleColor);
     text-align: center;
     text-shadow: 5px 5px 5px var(--shadowColor);
 }
@@ -42,22 +47,22 @@ body{
     text-align: center;
     justify-self: center;
     text-shadow: 2px 2px 2px var(--shadowColor);
-    color: var(--darkerColor);
+    color: var(--paragraphColor);
 }
 
 /*Barra de navegación*/
 
 nav{
     background: radial-gradient(var(--highlightColor) 45%,var(--highlightGradient));
-    height: 12vh;
+    height: 65px;
     width: 100%;
     font-size: 30px;
     position: sticky;
     margin-top: -30px;
     top: 0;
-    border-bottom: 2px solid var(--darkerColor);
+    border-bottom: 2px solid var(--borderColor);
     box-shadow: 0px 10px 10px rgb(0,0,0,0.25);
-    z-index: 1;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -69,9 +74,9 @@ nav{
     align-self: center;
     margin-left: 10px;
     background-color: var(--bgColor);
-    height: 8vh;
-    width: 24vh;
-    border: 3px solid var(--darkerColor);
+    height: 40px;
+    width: 145px;
+    border: 3px solid var(--borderColor);
     border-radius: 500px;
     cursor: pointer;
     left: 0;
@@ -82,18 +87,22 @@ nav{
 .slider{
     content: '';
     position: absolute;
-    height: 7vh;
-    width: 7vh;
+    height: 36px;
+    width: 36px;
     background-color: var(--bgColor);
     border: 2px solid var(--shadowColor);
     border-radius: 50%;
-    top: 1px;
-    left: 1px;  
+    left: 0px;
+    transition: left 0.5s;
+}
+
+input:checked + .slider{
+    left: 105px;
 }
 
 .modeImage{
     position: absolute;
-    height: 6vh;
+    height: 30px;
     top: 3px;
     left: 3px;
     opacity: 0.75;
@@ -105,26 +114,33 @@ input{
     height: 0;
 }
 
-
 ul{
     padding-top: 20px;
     justify-self: end;
-    margin-top: 0px;
-}
-
-li{
-    display: inline;
+    margin-top: -5px;
+    display: flex;
+    list-style-type: none;
 }
 
 a:link, a:visited{
     text-decoration: none;
     padding-right: 35px;
-    text-shadow: 1px 1px 1px #5e503f;
-    color: var(--darkerColor);
+    text-shadow: 1px 1px 1px var(--highlightGradient);
+    color: var(--borderColor);
+    transition: color 0.4s ease;
+    align-self: center;
 }
 
 a:hover{
     color: var(--bgColor);
+}
+
+body.darkMode a:hover{
+    color: var(--contrastColor)
+}
+
+button {
+    display: none;
 }
 
 /*Presentación*/
@@ -148,13 +164,14 @@ a:hover{
     margin-top: -60px;
     font-size: 40px;
     font-weight: lighter;
-    color: var(--darkerColor);
+    color: var(--contrastColor);
     text-align: center;
     text-shadow: 5px 5px 5px var(--shadowColor);
 }
 
 #presentation img{
-    height: 25vw;
+    height: 340px;
+    width: 340px;
     border-radius: 50%;
     box-shadow: 20px 15px 50px var(--shadowColor);
 }
@@ -162,6 +179,7 @@ a:hover{
 /*Sobre mi*/
 #aboutMe{
     margin-top: 10%;
+    color: var(--contrastColor);
 }
 
 .highlight{
@@ -179,10 +197,9 @@ a:hover{
 }
 
 .proyectCard{
-    width: 75vw;
-    height: 350px;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    width: 1020px; /*En estos dos está*/
+    height: 350px; /*el problema*/
+    display: flex;
     padding: 25px;
     border-radius: 35px;
     border: 5px solid var(--highlightColor);
@@ -210,27 +227,36 @@ a:hover{
 }
 
 .proyectImage{
-    height:25vw;
+    height:340px;
     border-radius: 35px;
     margin-left: 75px;
     box-shadow: 5px 5px 5px var(--shadowColor);
+    width: 620px;
 }
 
 .technologies{
-    color: var(--darkerColor);
-    width: 95;
+    color: var(--contrastColor);
+    width: 350px;
     display: flex;
     flex-wrap: nowrap;
 }
 
 .technologies p{
-    border: 2px solid var(--darkerColor);
+    border: 2px solid var(--contrastColor);
     font-size: 20px;
     padding: 5px 10px 5px 10px;
     border-radius: 25px;
-    background-color: rgb(59, 130, 246, 0.25);
     margin-top: auto;
     margin-right: 15px;
+    background-color: #3b82f640;
+}
+
+body.darkMode .technologies p{
+    background-color: rgb(149, 213, 178, 0.5);
+}
+
+.technologies a{
+    margin-top: -15px;
 }
 
 .technologies img{
@@ -248,17 +274,15 @@ a:hover{
 #managerExplanation{
     font-size: 23px;
     margin-top: -20px;
+    color: var(--contrastColor);
 }
 
 /*Propio lenguaje*/
 
-#explanation2{
+#languageExplanation{
     font-size: 22px;
     margin-top: -15px;
-}
-
-#languageImage{
-    width: 648px;
+    color: var(--contrastColor);
 }
 
 /*Contacto*/
@@ -266,6 +290,7 @@ a:hover{
 #contactMe p{
     margin-top: -25px;
     margin-bottom: 45px;
+    color: var(--contrastColor);
 }
 
 #contactMe div{
@@ -277,7 +302,7 @@ a:hover{
 
 #contactMe a{
     padding: 10px;
-    border: 2px solid var(--darkerColor);
+    border: 2px solid var(--contrastColor);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -306,7 +331,151 @@ footer{
     color: var(--shadowColor);
     text-align: center;
     font-weight: lighter;
-    border-top: 2px solid var(--darkerColor);
+    border-top: 2px solid var(--borderColor);
     padding-top: 0px;
     box-shadow: 0px -5px 5px var(--shadowColor);
+}
+
+/*Responsive*/
+
+@media (max-width:1100px) {
+    #presentation{
+        flex-direction: column-reverse;
+    }
+
+    #presentation h1{
+        justify-self: center;
+        font-size: 65px;
+        margin-top: 0;
+    }
+    
+    #presentation h2{
+        justify-self: center;
+        font-size: 35px;
+    }
+    
+    #presentation img{
+        height: 300px; 
+        width: 300px;
+        align-self: center;
+    }
+
+    .proyectImage{
+        display: none;
+    }
+
+    .proyectCard{
+        height: 250px;
+        width: 750px;
+    }
+
+    #managerExplanation{
+        padding-right: 20px;
+    }
+    
+    #languageExplanation{
+        padding-right: 20px;
+    }
+
+}
+
+/*Cambiar Nav*/
+@media (max-width:850px) {
+    .proyectCard{
+        height: auto;
+        width: 75vw;
+    }
+
+    #managerExplanation{
+        padding-right: 20px;
+    }
+    
+    #languageExplanation{
+        padding-right: 20px;
+    }
+
+    button{
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-right: 25px;
+        background: none;
+        border: 2px solid var(--contrastColor);
+        border-radius: 10px;
+        font-size: 32px;
+        color: var(--contrastColor);
+        box-shadow: 2px 2px 2px var(--highlightGradient);
+        cursor: pointer;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        align-self: center;
+    }
+
+    button:hover{
+        transform: translateY(-1px);
+        box-shadow: 4px 4px 4px var(--highlightGradient);
+    }
+
+    @keyframes showNav {
+        0% {height: 0px; opacity: 0;}
+        100%{height: 55px; opacity: 1;}
+    }
+
+    @keyframes hideNav {
+        0% { height: 55px; opacity: 1;}
+        100% { height: 0px; opacity: 0;}
+    }
+
+    ul{
+        display: none;
+        position: absolute;
+        height: 55px;
+        width: 100%;
+        margin:0;
+        padding:0;
+        background-color: var(--highlightGradient);
+        top: 65px;
+        left: 0;
+        right: 0;
+        border-top: 2px solid var(--borderColor);
+        border-bottom: 2px solid var(--borderColor);
+        box-shadow: 0px 10px 10px rgb(0,0,0,0.25);
+        justify-content:space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .show {
+        animation: showNav 0.5s ease forwards;
+    }
+    
+    .hide {
+        animation: hideNav 0.5s ease forwards;
+    }
+
+    li a:link, li a:visited{
+        color: var(--bgColor);
+        font-size: 5vw;
+        opacity: 0;
+    }
+    
+    li a:hover{
+        color: var(--highlightColor);
+    }
+
+    body.darkMode a:link, body.darkMode a:visited{
+        color: var(--contrastColor);
+    }
+
+    body.darkMode a:hover{
+        color: var(--highlightColor);
+    }
+
+    #contactMe div{
+        width:50%;
+    }
+
+    #contactMe img{
+        height:30px;
+    }
+
 }
