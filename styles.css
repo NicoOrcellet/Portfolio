@@ -1,5 +1,9 @@
 /*General styles*/
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root{
     --bgColor: #F9FAFB;
     --shadowColor: #D1D5DB;
@@ -20,7 +24,7 @@
     --borderColor: #2f3e46;
 }
 
-#aboutMe, #proyects, #contactMe{
+#aboutMe, #projects, #contactMe{
     scroll-margin-top: 15vh;
 }
 
@@ -189,16 +193,16 @@ button {
 
 /*Proyectos*/
 
-#proyects{
+#projects{
     margin-top: 50px;
     display: flex;
     flex-direction:column;
     align-items: center;
 }
 
-.proyectCard{
-    width: 1020px; /*En estos dos está*/
-    height: 350px; /*el problema*/
+.projectCard{
+    width: 1020px;
+    height: 350px;
     display: flex;
     padding: 25px;
     border-radius: 35px;
@@ -209,24 +213,24 @@ button {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyectCard:hover{
+.projectCard:hover{
     transform: translateY(-10px);
     box-shadow: 10px 10px 10px var(--shadowColor);
 }
 
-.infoProyect{
+.infoProject{
     margin-right: -40px;
     padding-left: 5px;
 }
 
-.proyectTitle{
+.projectTitle{
     font-size: 35px;
     margin-top: 15px;
     color: var(--highlightColor);
     text-shadow: 3px 3px 3px var(--shadowColor);
 }
 
-.proyectImage{
+.projectImage{
     height:340px;
     border-radius: 35px;
     margin-left: 75px;
@@ -256,15 +260,15 @@ body.darkMode .technologies p{
 }
 
 .technologies a{
-    margin-top: -15px;
+    margin-top: -17px;
 }
 
-.technologies img{
+.githubProject{
     height: 35px;
     transition: height 0.3s ease, transform 0.3s ease;
 }
 
-.technologies img:hover{
+.githubProject:hover{
     height: 40px;
     transform: translate(-2.5px,-2.5px);
 }
@@ -283,6 +287,40 @@ body.darkMode .technologies p{
     font-size: 22px;
     margin-top: -15px;
     color: var(--contrastColor);
+}
+
+/*Gestor de transacciones*/
+
+#transactionsProject .projectTitle{
+    font-size: 33px;
+}
+
+#transactionsExplanation{
+    font-size: 23px;
+    margin-top: -20px;
+    padding-right: 25px;
+    color: var(--contrastColor);
+}
+
+#transactionsProject .infoProject {
+    margin-right: 0;
+}
+
+#transactionsProject .projectImage {
+    margin-left: 0;
+}
+
+#transactionsProject .technologies {
+    margin-top: 25px;
+    width: 390px;
+}
+
+#transactionsProject .technologies p{
+    margin-right: 5px;
+}
+
+#transactionsProject .githubProject{
+    margin-left: 12px;
 }
 
 /*Contacto*/
@@ -360,11 +398,11 @@ footer{
         align-self: center;
     }
 
-    .proyectImage{
+    .projectImage{
         display: none;
     }
 
-    .proyectCard{
+    .projectCard{
         height: 250px;
         width: 750px;
     }
@@ -381,7 +419,7 @@ footer{
 
 /*Cambiar Nav*/
 @media (max-width:850px) {
-    .proyectCard{
+    .projectCard{
         height: auto;
         width: 75vw;
     }
@@ -476,6 +514,55 @@ footer{
 
     #contactMe img{
         height:30px;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .projectCard{
+        height: auto;
+        width: 75vw;
+    }
+
+    .infoProject {
+        width: 75vw;
+    }
+
+    .technologies {
+        flex-wrap: wrap;
+        width: 75vw;
+    }
+
+    #transactionsProject .technologies {
+        flex-wrap: wrap;
+        width: 75vw;
+    }
+
+    .technologies p {
+        width: auto;
+        padding: 5px 30px;
+        margin-right: 15px;
+    }
+
+    #presentation h1 {
+        font-size: 45px;
+    }
+
+    #presentation h2 {
+        margin-top: 5px;
+    }
+
+    footer {
+        height: 120px;
+        margin-bottom: 0px;
+        width: 100%;
     }
 
 }
